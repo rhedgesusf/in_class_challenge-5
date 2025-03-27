@@ -7,6 +7,7 @@ function displayPosts() {
     .then(posts => {
         posts.slice(0, 5).forEach(post => {
             const div = document.createElemeny('div');
+            div.innterHTML = `<h3>${post.title}</h3><p>${post.body}</p>`
             container.appendChild(div);
         });
     })
