@@ -7,7 +7,7 @@ export function displayData() {
     .then(datas => {
         datas.slice(0, 5).forEach(data => {
             const div = document.createElement('div');
-            div.innterHTML = `<h3>${data.name}</h3><p>${data.email}</p>`
+            div.innerHTML = `<h3>${data.name}</h3><p>${data.email}</p>`
             container.appendChild(div);
         });
     })
