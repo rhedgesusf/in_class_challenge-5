@@ -1,7 +1,6 @@
-const BASE_URL = 
-'https://jsonplaceholder.typicode.com/users';
+const BASE_URL = 'https://jsonplaceholder.typicode.com/posts';
 
-export function getPosts() {
+export function getData() {
     return fetch(BASE_URL)
     .then(response => {
         if (!response.ok) {
@@ -10,7 +9,7 @@ export function getPosts() {
         return response.json();
     })
     .catch(error => {
-        console.error('Fetch failed:', error.message);
+        console.error('Failed to load:', error.message);
         throw error;
-    });
+    })
 }
